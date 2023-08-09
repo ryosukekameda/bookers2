@@ -1,1 +1,20 @@
-<h4>book show</h4>
+<div class="col-md-8 offset-md-1">
+  <h2>Book detail</h2>
+  <table class="table">
+    <tbody>
+      <tr>
+        <td><%= image_tag @user.get_profile_image(100, 100) %>
+          <%= @user.user.name%>
+        </td>
+        <td><%= @book.title %></td>
+        <td><%= @book.body %></td>
+        <td>edit</td>
+        <td>
+          <% if @book.user == current_user %>
+            <%= link_to "destroy", books_path, method: :delete %>
+          <% end %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
