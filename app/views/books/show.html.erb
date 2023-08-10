@@ -15,7 +15,7 @@
         </td>
         <td>
           <% if @book.user == current_user %>
-            <%= link_to "destroy", books_path, method: :delete %>
+            <%= link_to "destroy", book_path(@book), method: :delete %>
           <% end %>
         </td>
       </tr>

@@ -1,13 +1,14 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12 col-md-8 col-lg-5 px-sm-0 mx-auto">
-      <%= form_with model: @book do |f| %>
+
       <h1>Editing Book</h1>
       <form>
+        <%= form_with model: @book do |f| %>
         <div class="form-group">
           <label for="book_title">Title</label>
          
-          <input class="form-control book_title" type="text" value="<% :title %>" name="book[title]" id="book_title" >
+          <input class="form-control book_title" type="text" value="<%= :title %>" name="book[title]" id="book_title" >
         </div>
         <div class="form-group">
           <label for="book_opinion">Opinion</label>
@@ -18,8 +19,8 @@
           <% f.submit 'Update Book' %>
           <input type="submit" name="commit" value="Update Book" class="btn btn-success" data-disable-with="Update Book">
         </div>
+         <% end %>
       </form>
-      <% end %>
     </div>
   </div>
 </div>
