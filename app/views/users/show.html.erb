@@ -1,3 +1,5 @@
+<%= render 'list', user: @user, book: @book %>
+
 <div>
   <h2>Books</h2>
   <h3><%= @user.name %></h3>
@@ -7,7 +9,7 @@
 <% @books.each do |books| %>
 
 <div>
-  <p>title:<%= books.title %></p>
+  <p><%= link_to books.title %></p>
   <p>body:<%= books.body %></p>
 </div>
 
