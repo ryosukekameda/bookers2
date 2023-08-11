@@ -1,7 +1,8 @@
-<%= render 'users/list', user: @user, book: @book %>
-
 <div class="container px-5 px-sm-0">
   <div class="row">
+
+    <%= render 'users/list', user: @user, book: @book %>
+
     <div class="col-md-8 offset-md-1">
       
       <h2>Books</h2>
@@ -19,7 +20,6 @@
             <tr>
               <td>
                 <%= image_tag @user.get_profile_image(100, 100) %>
-                <%= @user.name %>
               </td>
               <td>
                 <%= link_to books.title, book_path(books) %>
