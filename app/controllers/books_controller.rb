@@ -9,7 +9,7 @@ class BooksController < ApplicationController
     @books = Book.new(book_params)
     @books.user_id = current_user.id
     @books.save
-    redirect_to books_path(@books.id)
+    redirect_to book_path(@books)
   end
   
   def index
