@@ -28,16 +28,16 @@
             </tr>
           </thead>
           <tbody>
-            <% @books.each do |books| %>
+            <% @books.each do |book| %>
             <tr>
               <td>
                 <%= image_tag @user.get_profile_image(100, 100) %>
               </td>
               <td>
-                <%= link_to books.title, book_path(books) %>
+                <%= link_to book.title, book_path(book) %>
               </td>
               <td>
-                <%= books.body %>
+                <%= book.body %>
               </td>
             </tr>
             <% end %>
