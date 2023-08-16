@@ -14,29 +14,29 @@
       <% end %>
       
       <%= form_with model: @user do |f| %>
-       <form>
+    
           <div class="form-group">
             <label for="user_name">Name</label>
-            <%= f.text_field :name, :class => 'form-control name', :type => 'text', :id => 'user_name' %>
+            <%= f.text_field :name, :class => 'form-control name' %>
           </div>
   
           <div class="form-group">
             <label for="user_image">Image</label>
-            <%= f.file_field :profile_image, :class => 'form-control-file user_image', :accept => 'image/*', :type => 'file', :id => 'user_profile_image' %>
+            <%= f.file_field :profile_image, :class => 'form-control-file user_image' %>
           </div>
           
           <div class="from-group">
             <label for="user_introduction">Introduction</label>
-            <%= f.text_area :introduction, :class => 'form-control introduction', :id => 'user_introduction' %>
+            <%= f.text_area :introduction, :class => 'form-control introduction' %>
           </div>
           
           <div class="form-group">
-          <%= f.submit "Update User", :class => 'btn btn-secondary', :type => 'submit', :data_disable_with => 'Update User'%>
+          <%= f.submit "Update User", :class => 'btn btn-secondary' %>
           </div>
           
         <% end %>
 
-      </form>
+      
     </div>
   </div>
 </div>
